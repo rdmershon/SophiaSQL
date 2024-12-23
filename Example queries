@@ -1,0 +1,6 @@
+Inner join based on the key rep ID matching up with department mgr id
+
+SELECT *
+FROM representative
+JOIN department
+ON representative.representative_id = department.manager_id;
