@@ -16,3 +16,6 @@ We would remove the 5.71 and replace it with round brackets enclosing the first 
 SELECT invoice_id, invoice_date,customer_id, total 
 FROM invoice
 WHERE total > (SELECT ROUND(AVG(total),2) FROM invoice);
+
+The database would execute the subquery first, then take the result from that subquery and pass it to the outer query. 
+Then, the database would execute the outer query.
