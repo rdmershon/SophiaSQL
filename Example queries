@@ -19,3 +19,8 @@ WHERE total > (SELECT ROUND(AVG(total),2) FROM invoice);
 
 The database would execute the subquery first, then take the result from that subquery and pass it to the outer query. 
 Then, the database would execute the outer query.
+
+Basic Join
+SELECT name, track_id
+FROM playlist
+JOIN playlist_track ON playlist_track.playlist_id = playlist.playlist_id;
